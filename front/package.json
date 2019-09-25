@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode development"
+    "build": "webpack",
+    "start": "webpack-dev-server --hot"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "react-dom": "^16.9.0",
     "sass-loader": "^8.0.0",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   }
 }

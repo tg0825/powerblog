@@ -8,6 +8,11 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
     },
+    devServer: {
+        contentBase: path.resolve('./build'),
+        index: 'index.html',
+        port: 9000
+    },
     module: {
         rules: [
             {
