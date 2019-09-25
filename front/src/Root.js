@@ -11,6 +11,11 @@ font-size: 30px;
 border-radius: ${props => (props.round ? '10px' : '0')};
 `;
 
+const LargeButton = styled(Button)`
+    font-size: 50px;
+    padding: 20px;
+`;
+
 const Root = () => {
     return (
         <Fragment>
@@ -19,6 +24,7 @@ const Root = () => {
                 <h3 className="title">hello</h3>
                 <Header></Header>
                 <Button round>button</Button>
+                <LargeButton round>large button</LargeButton>
                 <Footer></Footer>
             </div>
         </Fragment>
