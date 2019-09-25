@@ -29,6 +29,11 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.scss$/,
+                // scss 변환 > css 변환 > 파일로 추출
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             }
         ]
     },
