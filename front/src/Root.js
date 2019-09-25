@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.css';
 
 const Root = () => {
     return (
-        <h3>hello</h3>
+        <h3 className="title">hello</h3>
     );
 };
 
