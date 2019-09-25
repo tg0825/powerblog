@@ -7,10 +7,11 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, '../build')
     },
+    mode: 'development',
     devServer: {
-        contentBase: path.resolve('./build'),
+        contentBase: path.resolve(__dirname, '../build'),
         index: 'index.html',
         port: 9000
     },
@@ -18,7 +19,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: '/node_modules',
+                exclude: /node_modules/,
                 use: [
                     'babel-loader'
                 ]
@@ -49,7 +50,7 @@ module.exports = {
             filename: 'index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: 'style-test.css'
+            filename: 'style.css'
         }),
         new CleanWebpackPlugin()
     ]
