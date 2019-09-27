@@ -7,6 +7,11 @@ import Header from './Header.js';
 import Container from './Container';
 import Footer from './Footer.js';
 
+import Send from './Send.js';
+import Receives from './Receives.js';
+
+import {SampleProvider} from './contexts/sample';
+
 const Button = styled.button`
 background: red;
 font-size: 30px;
@@ -18,11 +23,28 @@ const LargeButton = styled(Button)`
     padding: 20px;
 `;
 
+function Foo() {
+    return (
+        <div>test</div>
+    )
+}
+
+class Bar extends React.Component
+{
+    render() {
+        return (
+            <div>bar</div>
+        )
+    }
+}
+
 const Root = () => {
     return (
-        <Fragment>
+        <SampleProvider>
             <GlobalStyle/>
             <div>
+                <Foo></Foo>
+                <Bar></Bar>
                 <h3 className="title">hello</h3>
                 <Header></Header>
                 <div>
@@ -31,8 +53,17 @@ const Root = () => {
                 <Button round>button</Button>
                 <LargeButton round>large button</LargeButton>
                 <Footer></Footer>
+                <div>
+                    <Send></Send>
+                    <div>
+                        result
+                        <div>
+                            <Receives></Receives>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </Fragment>
+        </SampleProvider>
     );
 };
 
