@@ -1,23 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { SampleConsumer } from './contexts/sample';
-// const Send = () => {
-//     const [input, setInput] = useState('');
-//     const handleChange = (evt) => {
-//         setInput(evt.target.value);
-//     }
-//     const handleSubmit = (evt) => {
-//         evt.preventDefault();
-//     }
-// 
-//     return (
-//         <div>
-//             <form action="{handleSubmit}">
-//                 <input value={input} onChange={handleChange} type="text"/>
-//                 <button type="submit">set</button>
-//             </form>
-//         </div>
-//     );
-// };
 
 class Send extends React.Component {
     constructor(props) {
@@ -30,17 +12,19 @@ class Send extends React.Component {
     componentDidMount() {
         // :: 초기 값 설정
         this.setState({
-            input: this.props.value,
-        })
+            input: this.props.value
+        });
     }
     
     handleChange(e) {
-        this.setState({ input: e.target.value });
+        this.setState({ 
+            input: e.target.value 
+        });
     }
     
     handleSubmit(e) {
         e.preventDefault();
-        // :: props로 받은 setValue 호출
+        // contenxt api 메서드 활용
         this.props.setValue(this.state.input);
     }
     
