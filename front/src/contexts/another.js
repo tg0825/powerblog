@@ -34,7 +34,6 @@ class AnotherProvider extends Component {
             </Provider>
         )
     }
-    
 }
 
 // 내보내줍니다.
