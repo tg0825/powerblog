@@ -1,8 +1,10 @@
 import React, {Fragment} from 'react';
+import css from './css/style.css';
 import styled from 'styled-components';
 import GlobalStyle from './globalStyle.js';
 
 import Header from './Header.js';
+import Container from './Container';
 import Footer from './Footer.js';
 
 const Button = styled.button`
@@ -23,6 +25,9 @@ const Root = () => {
             <div>
                 <h3 className="title">hello</h3>
                 <Header></Header>
+                <div>
+                    <Container/>
+                </div>
                 <Button round>button</Button>
                 <LargeButton round>large button</LargeButton>
                 <Footer></Footer>

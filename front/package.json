@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.config.dev --hot",
+    "buildDev": "webpack --config ./config/webpack.config.dev",
     "build": "webpack --config ./config/webpack.config.prod"
   },
   "author": "",
